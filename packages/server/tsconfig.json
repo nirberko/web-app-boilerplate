@@ -1,25 +1,26 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
-    "lib": ["ESNext", "DOM"],
-    "moduleResolution": "Node",
-    "strict": true,
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "baseUrl": "src/",
-    "paths": {
-      "@config/*": ["config/*"],
-      "@components/*": ["components/*"],
-      "@helpers/*": ["utils/helpers/*"]
-    }
-  },
-  "include": ["./src"]
+   "compilerOptions": {
+      "target": "ESNext",
+      "module": "CommonJS",
+      "lib": ["ESNext", "DOM"],
+      "moduleResolution": "Node",
+      "strict": true,
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "noEmit": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "strictPropertyInitialization": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "baseUrl": "src/",
+      "paths": {
+         "@config/*": ["config/*"],
+         "@components/*": ["components/*"],
+         "@helpers/*": ["utils/helpers/*"]
+      }
+   },
+   "include": ["./src"]
 }

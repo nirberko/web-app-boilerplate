@@ -1,7 +1,10 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
+import morgan from 'morgan';
+
 import { Config } from './config';
+import { squadRouter } from '@components/squad/squad.routes';
 
 export class App {
   public app: express.Express;
@@ -9,6 +12,7 @@ export class App {
   constructor() {
     this.app = express();
     this.middlewares();
+    this.routes();
   }
 
   start(): Promise<void> {
@@ -21,10 +25,15 @@ export class App {
     });
   }
 
-  middlewares() {
+  middlewares(): void {
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: false }));
     this.app.use(helmet());
+    this.app.use(morgan('tiny'));
+  }
+
+  routes(): void {
+    this.app.use('/squad', squadRouter);
   }
 }
 
