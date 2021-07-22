@@ -4,7 +4,8 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 
 import { Config } from './config';
-import { squadRouter } from '@components/squad/squad.routes';
+
+import { userRouter } from '@components/user/user.routes';
 
 export class App {
   public app: express.Express;
@@ -33,7 +34,7 @@ export class App {
   }
 
   routes(): void {
-    this.app.use('/squad', squadRouter);
+    this.app.use('/user', userRouter);
   }
 }
 
